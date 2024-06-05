@@ -15,7 +15,7 @@ const Banner = () => {
         </div>
         <div className="flex-1 card-body">
           <div className="flex">
-          <i className="card-title ml-12">HAVE A WONDERFUL DAY</i>
+          <i className="card-title font-extrabold ml-12">HAVE A WONDERFUL DAY</i>
           <GiCoffeeCup className="text-5xl " />
           </div>
         

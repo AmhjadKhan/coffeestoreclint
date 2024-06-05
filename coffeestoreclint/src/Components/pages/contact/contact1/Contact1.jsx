@@ -7,7 +7,6 @@ const Contact1 = () => {
     <div>
       <div className="flex flex-col w-full lg:flex-row mt-4">
         <div className="grid flex-grow h-42 card bg-red-300 rounded-box place-items-center">
-          <h1 className="text-2xl text-gray-900 font-extrabold">Main Brance</h1>
           <div1 className="flex">
             <h1 className="text-xl font-bold">ADDRESS:-</h1>
             <h1 className="text-xl">Al-wasl-001</h1>
