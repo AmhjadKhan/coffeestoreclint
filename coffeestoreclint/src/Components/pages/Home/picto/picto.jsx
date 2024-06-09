@@ -12,7 +12,7 @@ const Picto = () => {
   }, []);
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 mb-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {coffeeData.map((coffee, index) => (
           <div

@@ -2,9 +2,9 @@
 const Navber = () => {
     const NavItem = (
      <>
-    <li><a href="/" className="text-white hover:text-red-500 text-xl">Home</a></li>
-    <li><a href="/about" className="text-white hover:text-red-500 text-xl">About</a></li>
-    <li><a href="/contact" className="text-white hover:text-red-500 text-xl">Contact</a></li>
+    <li><a href="/" className="text-black hover:text-red-500 text-2xl font-semibold">Home</a></li>
+    <li><a href="/about" className="text- hoveblackr:text-red-500 text-2xl font-semibold">About</a></li>
+    <li><a href="/contact" className="text-black hover:text-red-500 text-2xl font-semibold">Contact</a></li>
   </>
 );
     
