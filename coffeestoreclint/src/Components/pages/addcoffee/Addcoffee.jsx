@@ -1,9 +1,27 @@
 
 
 const Addcoffee = () => {
+    const handleAddcoffee  = event =>{
+        event.preventDefault();
+
+        const form = event.target;
+
+        const name = form.name.value;
+        const quantity = form.quantity.value;
+        const supplier = form.supplier.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const newCoffee = { name, quantity, supplier, taste, category, details, photo }
+
+        console.log(newCoffee); 
+    }
   return (
     <div>
-      <form>
+        <h1 className="text-4xl mt-6 mb-5  text-center">ADD COFFEE</h1>
+      <form onSubmit={handleAddcoffee}>
              {/* form name and quantity row */}
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
@@ -72,7 +90,7 @@ const Addcoffee = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Coffee" className="btn btn-block" />
+                <input type="submit" value="Add Coffee" className="btn btn-block mb-6 bg-slate-600" />
             </form>
     </div>
   )
