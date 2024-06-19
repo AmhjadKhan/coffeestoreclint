@@ -20,7 +20,7 @@ const Addcoffee = () => {
         console.log(newCoffee); 
 
         // send data server 
-        fetch('http://localhost:5000/coffee', {
+        fetch('http://localhost:3000/coffee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
