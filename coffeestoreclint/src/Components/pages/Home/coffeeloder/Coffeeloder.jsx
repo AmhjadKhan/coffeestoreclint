@@ -36,7 +36,7 @@ const Coffeeloder = () => {
 
   return (
     <div>
-      <h1 className="text-4xl text-center mb-6">This is coffee card:</h1>
+      <h1 className="text-4xl font-bold text-center mb-6"> Coffee Card {coffees.length} Avilavle</h1>
       <div className="grid md:grid-cols-2 gap-4">
         {currentItems.map((coffee) => (
           <Coffeecard key={coffee._id} coffee={coffee} />

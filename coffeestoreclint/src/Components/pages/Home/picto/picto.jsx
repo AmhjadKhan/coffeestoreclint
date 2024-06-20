@@ -17,7 +17,7 @@ const Picto = () => {
         {coffeeData.map((coffee, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded shadow-md"
+            className="p-4 rounded"
           >
             <img
               src={coffee.image}
