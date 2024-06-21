@@ -53,7 +53,9 @@ const Coffeecard = (coffee) => {
             </div>
             <p>{details}</p>
             <div className="flex gap-2 mt-4">
+              <Link to={`viewcoffee/${_id}`}>
               <button className="btn btn-primary">View</button>
+              </Link>
              <Link to={`updatecoffee/${_id}`}>
               <button className="btn btn-secondary">Update</button>
              </Link>

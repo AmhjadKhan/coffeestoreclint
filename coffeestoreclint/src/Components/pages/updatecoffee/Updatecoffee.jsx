@@ -3,8 +3,7 @@ import Swal from "sweetalert2";
 
 const Updatecoffee = () => {
   const coffee = useLoaderData();
-  const { _id, name, quantity, supplier, taste, category, details, photo } =
-    coffee;
+  const { _id, name, quantity, supplier, taste, category, details, photo } = coffee;
 
   const handleUpdateCoffee = (event) => {
     event.preventDefault();
