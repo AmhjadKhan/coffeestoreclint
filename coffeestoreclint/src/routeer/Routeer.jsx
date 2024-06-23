@@ -6,6 +6,8 @@ import Contact from "../Components/pages/contact/Contact";
 import Addcoffee from "../Components/pages/addcoffee/Addcoffee";
 import Updatecoffee from "../Components/pages/updatecoffee/Updatecoffee";
 import Viewcoffee from "../Components/pages/Home/viewcoffee/Viewcoffee";
+import Singup from "../Components/pages/singup/Singup";
+import Singin from "../Components/pages/singin/Singin";
 
 const myCreateRoute = createBrowserRouter([
     {
@@ -38,6 +40,14 @@ const myCreateRoute = createBrowserRouter([
                 path:'viewcoffee/:id',
                 element:<Viewcoffee />,
                 loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
+            },
+            {
+                path:'/singup',
+                element:<Singup />
+            },
+            {
+                path:'/singin',
+                element:<Singin />
             }
         ]
     }
