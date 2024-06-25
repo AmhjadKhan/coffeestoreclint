@@ -1,13 +1,25 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/Authprovider";
+
 
 
 const Singup = () => {
+    const { createUser } = useContext(AuthContext)
+    
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
-    // createUser(email, password)
+    console.log(email, password,name);
+    createUser(email, password)
+    .then(result => {
+        console.log(result)
+    })
+    .catch(error => {
+        console.log(error)
+    })
   };
   return (
     <div>
@@ -18,6 +30,18 @@ const Singup = () => {
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSignUp} className="card-body">
+            <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="name"
+                  name="name"
+                  placeholder="Name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>

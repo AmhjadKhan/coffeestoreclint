@@ -1,4 +1,14 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/Authprovider";
+
 const Navber = () => {
+  const {user, logOutsec} = useContext(AuthContext);
+  const handleLogout = ()=>{
+    logOutsec()
+    .then()
+    .catch()
+  }
   const NavItem = (
     <>
       <li>
@@ -75,8 +85,20 @@ const Navber = () => {
           <ul className="menu menu-horizontal px-1">{NavItem}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn text-red-600">ORDER NOW</a>
-        </div>
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img src='' />
+          </div>
+        </label>
+        {
+          user ?
+        <button onClick={handleLogout} className="btn bg-yellow-300">Log out</button> 
+         :
+         <Link to='/singin'>
+           <button className="btn">Log in</button> 
+         </Link>
+        }
+      </div>
       </div>
     </div>
   );
