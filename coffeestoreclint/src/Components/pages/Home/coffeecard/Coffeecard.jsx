@@ -1,11 +1,20 @@
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../../providers/Authprovider";
 
 
 const Coffeecard = (coffee) => {
+
+  const {user} = useContext(AuthContext);
+
     const { _id, name, quantity, supplier, taste, category, details, photo } = coffee.coffee;
     
     const handleDelete = _id => {
+      if (!user) {
+        navigate('/signin');
+        return;
+      }
         console.log(_id);
         Swal.fire({
           title: 'Are you sure?',

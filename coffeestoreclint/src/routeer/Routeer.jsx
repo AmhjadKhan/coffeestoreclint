@@ -8,6 +8,7 @@ import Updatecoffee from "../Components/pages/updatecoffee/Updatecoffee";
 import Viewcoffee from "../Components/pages/Home/viewcoffee/Viewcoffee";
 import Singup from "../Components/pages/singup/Singup";
 import Singin from "../Components/pages/singin/Singin";
+import Privateroute from "./privateroute/Privateroute";
 
 const myCreateRoute = createBrowserRouter([
     {
@@ -33,12 +34,12 @@ const myCreateRoute = createBrowserRouter([
             },
             {
                 path:'updatecoffee/:id',
-                element:<Updatecoffee />,
+                element:<Privateroute><Updatecoffee /></Privateroute>,
                 loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
             },
             {
                 path:'viewcoffee/:id',
-                element:<Viewcoffee />,
+                element:<Privateroute><Viewcoffee /></Privateroute>,
                 loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
             },
             {
