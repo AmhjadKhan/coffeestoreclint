@@ -18,7 +18,7 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/',
                 element:<Home />,
-                loader: () => fetch('http://localhost:3000/coffee')
+                loader: () => fetch('https://coffee-backend-alpha.vercel.app/coffee')
             },
             {
                 path:"/about",
@@ -35,12 +35,12 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'updatecoffee/:id',
                 element:<Privateroute><Updatecoffee /></Privateroute>,
-                loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
+                loader: ({params}) => fetch(`https://coffee-backend-alpha.vercel.app/coffee/${params.id}`)
             },
             {
                 path:'viewcoffee/:id',
                 element:<Privateroute><Viewcoffee /></Privateroute>,
-                loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
+                loader: ({params}) => fetch(`https://coffee-backend-alpha.vercel.app/coffee/${params.id}`)
             },
             {
                 path:'/singup',

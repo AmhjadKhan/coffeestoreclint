@@ -1,19 +1,27 @@
-import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Coffeecard from "../coffeecard/Coffeecard";
+import { useLoaderData } from "react-router-dom";
 
 const Coffeeloder = () => {
   const coffees = useLoaderData();
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(4); // Items per page
+  const [currentItems, setCurrentItems] = useState([]);
 
-  // Calculate the current items to display
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = coffees.slice(indexOfFirstItem, indexOfLastItem);
+  useEffect(() => {
+    if (Array.isArray(coffees)) {
+      // Calculate the current items to display
+      const indexOfLastItem = currentPage * itemsPerPage;
+      const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+      setCurrentItems(coffees.slice(indexOfFirstItem, indexOfLastItem));
+    } else {
+      console.error("Coffees is not an array:", coffees);
+      setCurrentItems([]);
+    }
+  }, [coffees, currentPage, itemsPerPage]);
 
   // Calculate total pages
-  const totalPages = Math.ceil(coffees.length / itemsPerPage);
+  const totalPages = Array.isArray(coffees) ? Math.ceil(coffees.length / itemsPerPage) : 1;
 
   // Function to handle page change
   const handlePageChange = (pageNumber) => {
@@ -36,7 +44,7 @@ const Coffeeloder = () => {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center mb-6"> Coffee Card {coffees.length} Avilavle</h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Coffee Card {Array.isArray(coffees) ? coffees.length : 0} Available</h1>
       <div className="grid md:grid-cols-2 gap-4">
         {currentItems.map((coffee) => (
           <Coffeecard key={coffee._id} coffee={coffee} />
@@ -57,7 +65,7 @@ const Coffeeloder = () => {
               onClick={() => handlePageChange(number)}
               className={`page-button px-4 py-2 rounded-lg border ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-white text-black'}`}
             >
-              <h1 className="text-4xl">{number}</h1>
+              {number}
             </button>
           ))}
         </div>
