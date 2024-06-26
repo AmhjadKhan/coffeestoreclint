@@ -20,12 +20,12 @@ const ReviewSlider = ({ reviews }) => {
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="review-card p-4 border border-gray-200 rounded-lg shadow-md"
+            className="review-card p-4 border border-red-500 rounded-lg shadow-md"
           >
             <img
-              src={review.image}
+              src={review.imageUrl}
               alt={review.title}
-              className="review-image w-full h-40 object-cover rounded-t-lg"
+              className="review-image rounded-full h-40 object-cover rounded-t-lg"
             />
             <div className="review-content p-4">
               <h2 className="review-title text-lg font-semibold mb-2">

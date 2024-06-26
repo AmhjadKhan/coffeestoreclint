@@ -4,27 +4,27 @@
     "title": "Great Product",
     "body": "I really enjoyed using this product. It exceeded my expectations!",
     "author": "John Doe",
-    "imageUrl": "https://example.com/great_product_image.jpg"
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutVc8EE_L-Khga4Yh3IIZTkUKu4LvPgpWwUq8A3S484R02llDBznjcfGqdg5YTYyu8Cs&usqp=CAU"
   },
   {
     "id": 2,
     "title": "Not bad",
     "body": "The product was okay, but there is room for improvement.",
     "author": "Jane Smith",
-    "imageUrl": "https://example.com/not_bad_product_image.jpg"
+    "imageUrl": "https://www.shutterstock.com/image-photo/man-checking-messages-on-his-260nw-410130829.jpg"
   },
   {
     "id": 3,
     "title": "Perfect",
     "body": "The product was perfect!",
     "author": "Jane Smith",
-    "imageUrl": "https://example.com/perfect_product_image.jpg"
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDjtNi1m_f5OuxG9GcNMqa9i4F2sq_dVREdA&sg"
   },
   {
     "id": 4,
     "title": "Good",
     "body": "The product was good.",
     "author": "Jane Smith",
-    "imageUrl": "https://example.com/good_product_image.jpg"
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_upPRVCDw1eDnd8NvbdQ5Vd_bZvi7jBqEwKO9KJ2hlQDQLI9nPVMYZUaiN0LumEPtxXI&usqp=CAU"
   }
 ]
