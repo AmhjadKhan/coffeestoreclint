@@ -14,7 +14,7 @@ const Home = () => {
       <Banner />
       <Picto />
       <Coffeeloder />
-      <Review />
+      {/* <Review /> */}
     </div>
   );
 };
